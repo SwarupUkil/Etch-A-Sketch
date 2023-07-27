@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    padding: 15px;
+    /* border: 1px solid black; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    /* border: 1px solid black; */
+    display: flex;
+    padding: 0;
+}
+
+.column {
+    border: 0.1px solid black;
+}
