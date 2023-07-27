@@ -2,16 +2,34 @@
 
 const container = document.querySelector('.container');
 const row = document.createElement('div');
-let column = document.createElement('div');
+const column = document.createElement('div');
+let columnGrid = [];
+let grid = [];
 
 row.classList.add('row');
 column.classList.add('column');
 
 // Adds columns to the row element.
-for(let v=0; v<16; v++){
-    row.appendChild(column.cloneNode());
+
+for (let i=0; i<16; i++){
+    for(let v=0; v<16; v++){
+        columnClone = column.cloneNode();
+        columnClone.addEventListener('mouseover', 
+        (event) => {
+            event.currentTarget.classList.add('black');
+        });
+        columnGrid.push(columnClone);
+        // row.appendChild(columnClone);
+    }
+
+    grid.push(columnGrid);
+    columnGrid = [];
 }
-for(let i=0; i<16; i++){
-    container.appendChild(row.cloneNode(true));
-    // container.appendChild(row);
+
+for (let i=0; i<16; i++){
+    rowClone = row.cloneNode();
+    for(let v=0; v<16; v++){
+        rowClone.appendChild(grid[i][v]);
+    }
+    container.appendChild(rowClone);
 }
