@@ -25,6 +25,7 @@ div {
 }
 
 .row {
+    box-sizing: border-box;
     display: flex;
     padding: 0;
     flex: 0 1 0;

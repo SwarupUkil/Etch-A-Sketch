@@ -21,7 +21,7 @@ function updateGrid(){
     for(let i = 0; i < gridSize; i++){
         for(let v = 0; v < gridSize; v++){
             columnClone = column.cloneNode();
-            columnClone.style.padding = `${(gridWidth / gridSize) / 2}px`
+            columnClone.style.padding = `${(gridWidth / gridSize / 2)}px`;
             columnClone.addEventListener('mouseover', 
             (event) => {
                 event.currentTarget.classList.add('black');
