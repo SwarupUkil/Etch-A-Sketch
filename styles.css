@@ -3,33 +3,37 @@ html {
 }
 
 body {
+    background-color: #F9FAF8;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center;2 */
-}
-
-div {
-    padding: 20px;
-    /* border: 1px solid black; */
-}
-
-.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+div {
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
 .row {
-    /* border: 1px solid black; */
     display: flex;
     padding: 0;
+    flex: 0 1 0;
 }
 
 .column {
-    border: 0.1px solid black;
+    /* border: 0.1px solid black; */
+    flex: 0 1 0;
+    /* padding: 20px; */
 }
 
 .black {
